@@ -12,8 +12,8 @@ server.get('/', (req, res) => {
 
 server.get('/festivals', (req, res) => {
     Festivals.getAll()
-        .then(festivals => {
-            res.status(200).json(hobbits);
+        .then(festival => {
+            res.status(200).json(festival);
         })
         .catch(error => {
             res.status(500).json(error);
